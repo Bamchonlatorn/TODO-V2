@@ -7,59 +7,14 @@ body {
     background-color: #daf4ff;
 }
 
-.header{
-    font-size: medium;
-}
-
-.container{
-    font-size: small;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-    width: 70vw;
-    height: 40lvh;
-}
-
-.subcontainer{
-    font-size: small;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.Box{
-    background-color: antiquewhite;
-}
-
-.positive{
-    font: 1em sans-serif;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    height: 5vh;
+.toggle-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
     border-radius: 5px;
-    background-color: greenyellow;
 }
 
-.neutral{
-    font: 1em sans-serif;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    height: 5vh;
-    border-radius: 5px;
-    background-color: rgb(168, 168, 168);
-}
-
-.negative{
-    font: 1em sans-serif;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    height: 5vh;
-    border-radius: 5px;
-    background-color: rgb(255, 112, 112);
+.toggle-button:hover {
+    background-color: #0056b3;
 }

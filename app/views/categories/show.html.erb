@@ -8,6 +8,7 @@
       <li>
         <strong>Name:</strong> <%= task.name %>,
         <strong>Status:</strong> <%= task.status %>
+        <%= link_to 'Toggle Status', toggle_status_task_path(@task), method: :get, class: 'toggle-button' %>
       </li>
     <% end %>
   </ul>

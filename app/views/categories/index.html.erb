@@ -2,25 +2,25 @@
 
 <% content_for :title, "Categories" %>
 
-<section class="inner">
+<section>
     <h1>Categories</h1>
 
-    <div class="container">
-      <div class="subcontainer">
+    <div>
+      <div>
         <% @categories.each do |category| %>
           <%= render category %>
-          <p class="neutral">
+          <p>
             <%= link_to "Show this category", category %>
           </p>
         <% end %>
       </div>
 
-      <section class="subcontainer">
-        <div class="neutral">
+      <section>
+        <div>
           <%= link_to "New category", new_category_path %>
         </div>
 
-        <div class="neutral"> 
+        <div> 
           <%= link_to "Back to tasks", tasks_path %>
         </div>
       </section>

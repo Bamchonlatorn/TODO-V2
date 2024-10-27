@@ -6,11 +6,19 @@
 
   <p>
     <strong>Status:</strong>
-    <%= task.status %>
+    <%= case task.status
+        when 0
+          "Incomplete"
+        when 1
+          "Complete"
+        else
+          "Unknown Status"
+        end %>
   </p>
 
   <p>
     <strong>Category:</strong>
     <%= task.category.name if task.category %>
   </p>
+  
 </div>

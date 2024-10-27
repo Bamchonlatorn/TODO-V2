@@ -8,6 +8,15 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task = Task.find(params[:id])
+  end
+
+  def complete
+   @tasks = Task.where(status: 1)
+  end
+
+  def incomplete
+    @tasks = Task.where(status: 0)
   end
 
   # GET /tasks/new
@@ -54,6 +63,16 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_path, status: :see_other, notice: "Task was successfully destroyed." }
       format.json { head :no_content }
+    end
+  end
+
+  def toggle_status
+    @task = Task.find(params[:id])
+    @task.status = @task.status == 0 ? 1 : 0
+    if @task.save
+      redirect_to tasks_path, notice: 'Task status updated successfully.'
+    else
+      redirect_to tasks_path, alert: 'Failed to update task status.'
     end
   end
 
