@@ -1,20 +1,203 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #daf4ff;
+    background-color: #F9F3E5; 
+    font-family: 'Arial', sans-serif; 
+    color: #3C3C3C; 
+    padding: 20px;
+}
+
+h1 {
+    color: #A0522D; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.category {
+    background-color: #FFDEAD; 
+    border: 2px solid #DAA520; 
+    border-radius: 8px; 
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.category:hover {
+    transform: scale(1.05); 
+}
+
+.link {
+    color: #8B4513; 
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อเอาเมาส์ชี้ */
+}
+
+.btn {
+    background-color: #FFA07A; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #FF7F50; /* สีส้มเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+}
+
+
+body {
+    background-color: #F9F3E5;
+    font-family: 'Arial', sans-serif; 
+    color: #3C3C3C; 
+    padding: 20px;
+}
+
+h1 {
+    color: #A0522D; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tasks {
+    margin: 20px auto;
+    max-width: 600px; /* ขีดจำกัดความกว้าง */
+}
+
+.task {
+    background-color: #FFDEAD; /* สีพื้นหลังหมวดหมู่ */
+    border: 2px solid #DAA520; 
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: scale(1.05); /* ขยายเมื่อเอาเมาส์ชี้ */
+}
+
+.link {
+    color: #8B4513; 
+    text-decoration: none;
+    margin-right: 10px; /* เว้นระยะระหว่างลิงก์ */
+}
+
+.link:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อเอาเมาส์ชี้ */
 }
 
 .toggle-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
+    background-color: #FFA07A; 
+    color: #fff; 
+    border: none;
     border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 .toggle-button:hover {
-    background-color: #0056b3;
+    background-color: #FF7F50; /* สีส้มเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+}
+
+.button-container {
+    text-align: center; /* จัดให้อยู่กลาง */
+    margin-top: 20px; /* ระยะด้านบน */
+}
+
+.btn {
+    background-color: #DDA0DD; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px; /* ระยะรอบปุ่ม */
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #BA55D3; /* สีม่วงเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+}
+
+
+body {
+    background-color: #F9F3E5; /* สีพื้นหลังอบอุ่น */
+    font-family: 'Arial', sans-serif; /* ฟอนต์ */
+    color: #3C3C3C; /* สีตัวอักษร */
+    padding: 20px;
+}
+
+h1 {
+    color: #A0522D; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #8B4513;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none; /* เอาสัญลักษณ์ในรายการออก */
+    padding: 0; /* เอาระยะpadding ออก */
+    margin: 20px 0; /* ระยะด้านบนและล่าง */
+}
+
+li {
+    background-color: #FFDEAD; /* สีพื้นหลังหมวดหมู่ */
+    border: 1px solid #DAA520; 
+    border-radius: 8px; /* มุมโค้ง */
+    padding: 10px;
+    margin: 5px 0; /* ระยะระหว่างรายการ */
+    transition: transform 0.2s; /* การเปลี่ยนแปลงเมื่อชี้ */
+    position: relative; 
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* ระยะจากด้านบน */
+    left: -5px; /* ระยะจากด้านซ้าย */
+    right: -5px; /* ระยะจากด้านขวา */
+    bottom: -5px; /* ระยะจากด้านล่าง */ 
+    border: 2px dashed #DAA520; 
+    border-radius: 10px; 
+    z-index: -1; 
+}
+
+li:hover {
+    transform: scale(1.03); /* ขยายเมื่อเอาเมาส์ชี้ */
+}
+
+.toggle-button {
+    background-color: #FFA07A; /* สีส้มอ่อน */
+    color: #fff; /* สีตัวอักษร */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px; /* ระยะทางด้านซ้าย */
+}
+
+.toggle-button:hover {
+    background-color: #FF7F50; /* สีส้มเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+}
+
+.link {
+    color: #8B4513;
+    text-decoration: none;
+    margin: 0 10px; /* เว้นระยะระหว่างลิงก์ */
+}
+
+.link:hover {
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อเอาเมาส์ชี้ */
 }
