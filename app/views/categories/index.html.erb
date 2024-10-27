@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Categories" %>
+
+<section class="inner">
+    <h1>Categories</h1>
+
+    <div class="container">
+      <div class="subcontainer">
+        <% @categories.each do |category| %>
+          <%= render category %>
+          <p class="neutral">
+            <%= link_to "Show this category", category %>
+          </p>
+        <% end %>
+      </div>
+
+      <section class="subcontainer">
+        <div class="neutral">
+          <%= link_to "New category", new_category_path %>
+        </div>
+
+        <div class="neutral"> 
+          <%= link_to "Back to tasks", tasks_path %>
+        </div>
+      </section>
+    </div>
+</section>
