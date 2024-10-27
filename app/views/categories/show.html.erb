@@ -8,7 +8,7 @@
       <li>
         <strong>Name:</strong> <%= task.name %>,
         <strong>Status:</strong> <%= task.status %>
-        <%= link_to 'Toggle Status', toggle_status_task_path(@task), method: :get, class: 'toggle-button' %>
+        <%= link_to 'Toggle Status', toggle_status_task_path(task), method: :get, class: 'toggle-button' %>
       </li>
     <% end %>
   </ul>
@@ -16,6 +16,5 @@
   <p>No tasks in this category.</p>
 <% end %>
 
-<%= link_to 'Edit Category', edit_category_path(@category) %> |
-<%= link_to 'Back to Categories', categories_path %>
-
+<%= link_to 'Edit Category', edit_category_path(@category), class: 'link' %> |
+<%= link_to 'Back to Categories', categories_path, class: 'link' %>
